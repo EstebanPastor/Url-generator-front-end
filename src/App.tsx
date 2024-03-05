@@ -1,4 +1,4 @@
-
+import "./global.scss"
 
 const App = () => {
   return (
