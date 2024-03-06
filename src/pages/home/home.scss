@@ -1,0 +1,63 @@
+@import "../../mixins";
+
+.home {
+  width: 100%;
+  @include d-flex(column, flex-start, center);
+  padding: 2rem;
+  padding-top: 4rem;
+  gap: 2rem;
+
+  .heading {
+    width: 100%;
+    @include d-flex(row, space-between, center);
+
+    svg {
+      font-size: 40px;
+    }
+  }
+  .cards {
+    @include border1();
+    @include shadow1();
+    @include d-flex(column, space-between, center);
+    margin: 0.6rem 0;
+    padding: 0.6rem 1.2rem;
+    width: 100%;
+
+    border-radius: 12px;
+
+    .card {
+      @include border1();
+      @include shadow1();
+      @include d-flex(row, space-between, center);
+      margin: 0.6rem 0;
+      padding: 0.6rem 1.2rem;
+
+      width: 100%;
+      border-radius: 32px;
+
+      .time {
+        margin-left: 10px;
+      }
+
+      .left {
+        margin-left: 1rem;
+        font-size: 14px;
+        color: #050506;
+      }
+
+      .url {
+        margin-top: 6px;
+        span {
+          margin-top: 0.5rem;
+          font-size: 14px;
+          background-color: #d0cbcb;
+          padding: 3px 6px;
+          border-radius: 50px;
+        }
+      }
+
+      .right {
+      }
+    }
+  }
+}
