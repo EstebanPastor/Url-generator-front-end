@@ -8,7 +8,11 @@ import axios from "axios";
 import { baseURL } from "../../constants/url.constant";
 import moment from "moment";
 
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+  const navigate = useNavigate();
+
   const [videos, setVideos] = useState<IVideo[]>([]);
 
   useEffect(() => {
@@ -23,7 +27,7 @@ const Home = () => {
       <div className="heading">
         <h1>Video list</h1>
         <span>
-          <AddCircle />
+          <AddCircle onClick={() => navigate("/add-video")} />
         </span>
       </div>
       <div className="cards">
