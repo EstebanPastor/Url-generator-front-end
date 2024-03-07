@@ -25,6 +25,10 @@
 
     border-radius: 12px;
 
+    .no-video {
+      padding: 4rem;
+    }
+
     .card {
       @include border1();
       @include shadow1();
@@ -57,6 +61,14 @@
       }
 
       .right {
+        .btns {
+          .edit-btn {
+            color: rgb(17, 40, 245);
+          }
+          .delete-btn {
+            color: rgb(250, 8, 8);
+          }
+        }
       }
     }
   }

@@ -39,6 +39,7 @@ const Home = () => {
         </span>
       </div>
       <div className="cards">
+        {videos.length === 0 && <h1 className="no-video">No videos available</h1> }
         {videos.map((item) => (
           <div key={item.id} className="card">
             <div className="left">
@@ -53,8 +54,8 @@ const Home = () => {
             </div>
             <div className="right">
               <div className="btns">
-                <Edit onClick={() => redirectToEdit(item.id)} />
-                <Delete onClick={() => redirectToDelete(item.id)} />
+                <Edit className="edit-btn" onClick={() => redirectToEdit(item.id)} />
+                <Delete className="delete-btn" onClick={() => redirectToDelete(item.id)} />
               </div>
             </div>
           </div>
