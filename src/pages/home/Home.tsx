@@ -13,10 +13,13 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
 
-
   const redirectToEdit = (videoId: string) => {
     navigate(`/edit-video/${videoId}`);
-  }
+  };
+
+  const redirectToDelete = (videoId: string) => {
+    navigate(`/delete-video/${videoId}`);
+  };
 
   const [videos, setVideos] = useState<IVideo[]>([]);
 
@@ -50,10 +53,8 @@ const Home = () => {
             </div>
             <div className="right">
               <div className="btns">
-                <Edit 
-                onClick={() => redirectToEdit(item.id)}
-                />
-                <Delete />
+                <Edit onClick={() => redirectToEdit(item.id)} />
+                <Delete onClick={() => redirectToDelete(item.id)} />
               </div>
             </div>
           </div>
